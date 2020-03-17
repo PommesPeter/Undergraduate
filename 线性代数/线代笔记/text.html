@@ -1,0 +1,903 @@
+<!DOCTYPE html><html><head>
+      <title>text</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\43459\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.0\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0">&#x7EBF;&#x6027;&#x4EE3;&#x6570;</h1>
+
+<h2 class="mume-header" id="%E7%9F%A9%E9%98%B5">&#x77E9;&#x9635;</h2>
+
+<h3 class="mume-header" id="%E7%9F%A9%E9%98%B5%E5%8F%AF%E9%80%86">&#x77E9;&#x9635;&#x53EF;&#x9006;</h3>
+
+<ul>
+<li>AB=BA=E</li>
+<li>&#x63A8;&#x8BBA;&#xFF1A;AB=E&#x300A;==&#x300B;&#x53EF;&#x9006;</li>
+<li>&#x5148;&#x6C42;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;&#xFF0C;&#x518D;&#x6C42;&#x4F34;&#x968F;&#x9635;&#xFF0C;&#x7136;&#x540E;&#x76F8;&#x4E58;</li>
+<li>&#x6027;&#x8D28;</li>
+</ul>
+<h3 class="mume-header" id="%E7%9F%A9%E9%98%B5%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E6%80%A7%E8%B4%A8">&#x77E9;&#x9635;&#x884C;&#x5217;&#x5F0F;&#x7684;&#x6027;&#x8D28;</h3>
+
+<ul>
+<li>|A^T|=|A|</li>
+<li>|kA|=k^n|A|</li>
+<li>|AB|=|A|*|B|</li>
+<li>&#x4EE5;&#x4E0A;&#x6027;&#x8D28;&#x6210;&#x7ACB;&#x6761;&#x4EF6;&#xFF1A;A,B&#x5747;&#x4E3A;n&#x9636;&#x65B9;&#x9635;&#x4E14;&#x540C;&#x9636;</li>
+</ul>
+<h3 class="mume-header" id="%E7%9F%A9%E9%98%B5%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2">&#x77E9;&#x9635;&#x521D;&#x7B49;&#x53D8;&#x6362;</h3>
+
+<ul>
+<li>
+<p>&#x89E3;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x521D;&#x7B49;&#x5217;&#x53D8;&#x6362;&#xFF08;&#x65B9;&#x7A0B;&#x7EC4;&#x4E0D;&#x540C;&#x89E3;&#xFF09;</p>
+<ul>
+<li>&#x65B9;&#x6CD5;&#xFF1A;&#x5148;&#x5316;&#x6210;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#xFF0C;&#x5224;&#x65AD;&#x589E;&#x5E7F;&#x77E9;&#x9635;&#x865A;&#x7EBF;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x975E;0&#x884C;&#x4E2A;&#x6570;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF08;&#x76F8;&#x7B49;&#x5C31;&#x662F;&#x6709;&#x89E3;&#xFF09;&#xFF0C;&#x518D;&#x5224;&#x65AD;&#x975E;0&#x884C;&#x6570;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x672A;&#x77E5;&#x91CF;&#x4E2A;&#x6570;&#xFF08;&#x76F8;&#x7B49;&#x5C31;&#x662F;&#x6709;&#x552F;&#x4E00;&#x89E3;&#xFF0C;&#x975E;0&#x884C;&#x4E2A;&#x6570;&lt;&#x672A;&#x77E5;&#x91CF;&#x4E2A;&#x6570;&#xFF0C;&#x5219;&#x6709;&#x65E0;&#x7A77;&#x591A;&#x89E3;&#xFF09;</li>
+</ul>
+</li>
+<li>
+<p>&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;</p>
+<ul>
+<li>
+<p>1.&#x67D0;&#x884C;&#x5168;&#x4E3A;0&#x2192;&#x96F6;&#x884C;</p>
+</li>
+<li>
+<p>2.&#x67D0;&#x884C;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x4E0D;&#x4E3A;0&#x2192;&#x975E;0&#x884C;</p>
+</li>
+<li>
+<p>3.&#x81EA;&#x5DE6;&#x5411;&#x53F3;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x4E3A;0&#x7684;&#x5143;&#x7D20;&#x2192;&#x975E;0&#x9996;&#x5143;</p>
+</li>
+<li>
+<p>&#x9636;&#x68AF;&#x9635;&#x5B9A;&#x4E49;</p>
+<ul>
+<li>
+<p>(1)&#x82E5;&#x6709;0&#x884C;&#xFF0C;&#x5219;&#x8981;&#x4F4D;&#x4E8E;&#x5E95;&#x90E8;&#xFF08;&#x4F4D;&#x4E8E;&#x5E95;&#x90E8;&#x540E;&#x5C31;&#x4E0D;&#x5728;&#x770B;&#x8FD9;&#x4E00;&#x884C;&#xFF09;</p>
+</li>
+<li>
+<p>(2)&#x6BCF;&#x4E00;&#x4E2A;&#x975E;0&#x9996;&#x5143;&#x524D;&#x9762;0&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x9010;&#x884C;&#x4E25;&#x683C;&#x589E;&#x52A0;&#xFF08;&#x9012;&#x589E;&#xFF0C;&#x4E0D;&#x80FD;&#x4E0D;&#x53D8;&#xFF09;</p>
+</li>
+<li>
+<p>&#x6700;&#x7B80;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;</p>
+<ul>
+<li>&#x662F;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;</li>
+<li>&#x6240;&#x6709;&#x975E;&#x96F6;&#x9996;&#x5143;&#x90FD;&#x662F;1</li>
+<li>&#x6240;&#x6709;&#x7684;&#x975E;0&#x9996;&#x5143;&#x6240;&#x5728;&#x7684;&#x5217;&#x7684;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x90FD;&#x662F;0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;</p>
+<ul>
+<li>&#x6240;&#x6709;&#x89E3;&#x90FD;&#x80FD;&#x5145;&#x5F53;&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;</li>
+<li>&#x9009;&#x6700;&#x7B80;&#x5355;&#x90A3;&#x4E2A;&#x5F53;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</li>
+</ul>
+</li>
+<li>
+<p>&#x65B9;&#x6CD5;&#xFF1A;&#x4E0E;&#x6C42;&#x884C;&#x5217;&#x5F0F;&#x5316;&#x6210;&#x4E0A;&#x4E09;&#x89D2;&#x5F62;&#x884C;&#x5217;&#x5F0F;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#xFF0C;&#x5C06;&#x9636;&#x68AF;&#x4EE5;&#x4E0B;&#x7684;&#x5143;&#x7D20;&#x5316;&#x6210;0&#xFF0C;&#x4EE5;&#x53CA;&#x9636;&#x68AF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x5316;&#x6210;1&#xFF0C;&#x5224;&#x65AD;&#x6709;&#x89E3;&#x548C;&#x552F;&#x4E00;&#x89E3;&#xFF0C;&#x518D;&#x5012;&#x8FC7;&#x6765;&#x4ECE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x975E;0&#x9996;&#x5143;&#x6240;&#x5728;&#x5217;&#x7684;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x5316;&#x6210;0</p>
+</li>
+<li>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6BCF;&#x505A;&#x4E00;&#x6B65;&#x90FD;&#x8981;&#x770B;&#x662F;&#x4E0D;&#x662F;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;</p>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x521D;&#x7B49;&#x884C;&#x53D8;&#x6362;</p>
+</li>
+<li>
+<p>&#x7B49;&#x4EF7;</p>
+<ul>
+<li>&#x81EA;&#x53CD;&#x6027;&#xFF0C;&#x81EA;&#x8EAB;&#x7B49;&#x4EF7;</li>
+<li>&#x5BF9;&#x79F0;&#x6027;&#xFF0C;A&#x4E0E;B &#x300A;==&#x300B;B&#x4E0E;A</li>
+<li>&#x4F20;&#x9012;&#x6027;&#xFF0C;A&#x4E0E;B&#xFF0C;B&#x4E0E;C==&#x300B;A&#x4E0E;C</li>
+</ul>
+</li>
+<li>
+<p>&#x7B49;&#x4EF7;&#x6807;&#x51C6;&#x578B;</p>
+<ul>
+<li>
+<p>&#x5316;&#x6210;&#x5206;&#x5757;&#x77E9;&#x9635;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x4E3A;&#x5355;&#x4F4D;&#x9635;&#xFF0C;&#x5176;&#x4ED6;&#x5B50;&#x5757;&#x5747;&#x4E3A;0&#x9635;&#x7684;&#x77E9;&#x9635;</p>
+</li>
+<li>
+<p>&#x65B9;&#x6CD5;&#xFF1A;A&#x7ECF;&#x8FC7;&#x884C;&#x53D8;&#x6362;&#x2192;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#x2192;&#x518D;&#x7ECF;&#x8FC7;&#x884C;&#x53D8;&#x6362;&#x2192;&#x6700;&#x7B80;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#x2192;&#x518D;&#x7ECF;&#x8FC7;&#x5217;&#x53D8;&#x6362;&#x2192;&#x7B49;&#x4EF7;&#x6807;&#x51C6;&#x578B;</p>
+<ul>
+<li>&#x5173;&#x952E;&#x627E;0&#xFF0C;&#x7528;0&#x6700;&#x591A;&#x7684;&#x4E00;&#x5217;&#x628A;&#x5176;&#x4ED6;&#x5217;&#x5F04;&#x6210;0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E5%88%9D%E7%AD%89%E7%9F%A9%E9%98%B5">&#x521D;&#x7B49;&#x77E9;&#x9635;</h3>
+
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x7ECF;&#x8FC7;&#x4E00;&#x6B21;&#x521D;&#x7B49;&#x53D8;&#x6362;&#x7684;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#xFF0C;&#x4EFB;&#x4F55;&#x77E9;&#x9635;&#x90FD;&#x80FD;&#x53D8;&#x6210;&#x5355;&#x4F4D;&#x9635;</p>
+</li>
+<li>
+<p>&#x522B;&#x6CD5;&#x6C42;&#x9006;</p>
+<ul>
+<li>A&#x65B9;&#x9635;&#x53EF;&#x9006;&#xFF0C;&#x628A;A&#x548C;&#x540C;&#x578B;&#x7684;&#x5355;&#x4F4D;&#x9635;E&#x5E76;&#x6392;&#x5199;&#x51FA;&#xFF0C;&#x901A;&#x8FC7;&#x521D;&#x7B49;&#x884C;&#x53D8;&#x6362;&#x5C06;&#x539F;&#x6765;A&#x7684;&#x9635;&#x53D8;&#x6210;E&#xFF0C;&#x8FDB;&#x800C;&#x5F97;&#x51FA;&#x7684;&#x53E6;&#x4E00;&#x8FB9;&#x5C31;&#x662F;A&#x7684;&#x9006;&#xFF08;(A,E)&#x2192;&#x521D;&#x7B49;&#x884C;&#x53D8;&#x6362;&#x2192;(E,A^-1)&#xFF09;</li>
+<li>&#x53EF;&#x9006;&#x9635;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5316;&#x6210;&#x5355;&#x4F4D;&#x9635;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E7%A7%A9">&#x79E9;</h3>
+
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x77E9;&#x9635;AmXn&#xFF0C;&#x82E5;&#x6709;&#x4E00;&#x4E2A;r&#x9636;&#x5B50;&#x5F0F;&#x4E0D;&#x4E3A;0&#xFF0C;&#x6240;&#x6709;&#x7684;r+1&#x9636;&#x5B50;&#x5F0F;&#x5168;&#x4E3A;0&#xFF0C;&#x5219;r&#x662F;&#x77E9;&#x9635;&#x7684;&#x79E9;&#xFF0C;&#x8BB0;R&#xFF08;A&#xFF09;=r&#xFF0C;(&#x96F6;&#x77E9;&#x9635;&#x7684;&#x79E9;&#x4E3A;0)</p>
+<ul>
+<li>&#x6700;&#x9AD8;&#x9636;&#x975E;0&#x5B50;&#x5F0F;&#x7684;&#x9636;&#x6570;&#x4E3A;r</li>
+</ul>
+</li>
+<li>
+<p>An&#x65B9;&#x9635;&#x53EF;&#x9006;&#xFF0C;R(An)=n</p>
+<ul>
+<li>&#x56E0;&#x4E3A;&#x53EF;&#x9006;&#x5373;&#x4E3A;|An|&#xFF01;=0&#xFF0C;&#x5373;r&#x9636;&#x5B50;&#x5F0F;&#xFF01;=0</li>
+</ul>
+</li>
+<li>
+<p>&#x7ED3;&#x8BBA;</p>
+<ul>
+<li>R(A)&lt;=min{m,n}</li>
+<li>R(A)&gt;=1</li>
+</ul>
+</li>
+<li>
+<p>&#x6C42;&#x6CD5;</p>
+<ul>
+<li>
+<p>&#x4E00;&#x822C;&#x77E9;&#x9635;&#x6C42;&#x79E9;&#x2192;&#x5316;&#x6210;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#x6C42;&#x79E9;</p>
+<ul>
+<li>&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#x7684;&#x79E9;=&#x975E;0&#x884C;&#x4E2A;&#x6570;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x5224;&#x5B9A;</p>
+<ul>
+<li>
+<p>&#x975E;&#x9F50;&#x6B21;</p>
+<ul>
+<li>
+<p>R(A)=R(A,b)&#x6709;&#x89E3;</p>
+<ul>
+<li>R(A,b)=r=n&#x552F;&#x4E00;&#x89E3;</li>
+<li>R(A,b)=r&lt;n&#x65E0;&#x7A77;&#x591A;&#x89E3;</li>
+</ul>
+</li>
+<li>
+<p>R(A)&lt;R(A,b)&#x65E0;&#x89E3;</p>
+</li>
+<li>
+<p>&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;</p>
+<ul>
+<li>n-r=&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;</li>
+<li>&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;&#x6700;&#x540E;&#x7684;&#x89E3;&#x4E00;&#x5B9A;&#x5199;C&#x4E3A;&#x4EFB;&#x610F;&#x5E38;&#x6570;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x9F50;&#x6B21;</p>
+<ul>
+<li>R(A)=r=n&#x6709;&#x552F;&#x4E00;&#x89E3;&#x4E14;&#x4E3A;0&#x89E3;</li>
+<li>R(A)=r&lt;n&#x65E0;&#x7A77;&#x591A;&#x89E3;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x77E9;&#x9635;&#x7684;&#x79E9;</p>
+<ul>
+<li>
+<p>&#x6761;&#x4EF6;&#xFF1A;&#x6709;&#x4E00;&#x4E2A;r&#x9636;&#x7684;&#x4E0D;&#x4E3A;0&#xFF0C;r+1&#x9636;&#x5168;&#x4E3A;0</p>
+</li>
+<li>
+<p>&#x5404;&#x79CD;&#x6027;&#x8D28;</p>
+<ul>
+<li>R&#xFF08;A&#xFF09;=r &lt;=&gt; A&#x7684;&#x6700;&#x9AD8;&#x9636;&#x975E;&#x96F6;&#x5B50;&#x5F0F;&#x7684;&#x9636;&#x6570;&#x4E3A;r</li>
+<li>A&#x7684;&#x5927;&#x4E8E;r&#x9636;&#x7684;&#x5B50;&#x5F0F;&#x5747;&#x4E3A;0</li>
+<li>R&#xFF08;A&#xFF09;&lt; = min{r,v}</li>
+<li>&#x82E5;A&#x662F;&#x4E2A;&#x96F6;&#x77E9;&#x9635;&#x5219;R&#xFF08;A) = 0</li>
+<li>n&#x9636;&#x7684;&#x65B9;&#x9635;&#x5982;&#x679C;&#x53EF;&#x9006;&#x5176;&#x79E9;&#x4E3A;n</li>
+<li>&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;&#x7684;&#x975E;&#x96F6;&#x884C;&#x6570;=&#x77E9;&#x9635;&#x7684;&#x79E9;</li>
+<li>&#x521D;&#x7B49;&#x53D8;&#x6362;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x77E9;&#x9635;&#x7684;&#x79E9;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E5%90%91%E9%87%8F%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7">&#x5411;&#x91CF;&#x7684;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x6027;</h3>
+
+<ul>
+<li>
+<p>&#x6982;&#x5FF5;</p>
+<ul>
+<li>
+<p>&#x5411;&#x91CF;</p>
+<ul>
+<li>&#x7279;&#x6B8A;&#x77E9;&#x9635;</li>
+</ul>
+</li>
+<li>
+<p>&#x5206;&#x91CF;</p>
+<ul>
+<li>&#x77E9;&#x9635;&#x5185;&#x7684;&#x5143;&#x7D20;</li>
+</ul>
+</li>
+<li>
+<p>&#x5411;&#x91CF;&#x7EC4;</p>
+<ul>
+<li>&#x7EF4;&#x6570;&#x76F8;&#x540C;&#x7684;&#x5411;&#x91CF;&#x6784;&#x6210;&#x7684;&#x96C6;&#x5408;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7EBF;&#x6027;&#x8868;&#x793A;</p>
+<ul>
+<li>
+<p>&#x82E5;&#x53EF;&#x4EE5;&#x7EBF;&#x6027;&#x8868;&#x793A;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x5176;k&#x5B58;&#x5728;&#x5373;&#x7B49;&#x4EF7;&#x4E8E;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x6709;&#x89E3;</p>
+</li>
+<li>
+<p>&#x6709;&#x89E3;&#x2192;&#x80FD;&#x7EBF;&#x6027;&#x8868;&#x793A;</p>
+</li>
+<li>
+<p>&#x65E0;&#x89E3;&#x2192;&#x4E0D;&#x80FD;&#x7EBF;&#x6027;&#x8868;&#x793A;</p>
+</li>
+<li>
+<p>&#x91CD;&#x8981;&#x5B9A;&#x7406;</p>
+<ul>
+<li>
+<p>&#x82E5;A&#xFF0C;B&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x7EBF;&#x6027;&#x8868;&#x793A;&#x5219;&#x79F0;A&#xFF0C;B&#x7B49;&#x4EF7;</p>
+<ul>
+<li>&#x7B49;&#x4EF7;&#x7684;&#x5411;&#x91CF;&#x79E9;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x79E9;&#x76F8;&#x540C;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#x4E0D;&#x4E00;&#x5B9A;&#x7B49;&#x4EF7;</li>
+</ul>
+</li>
+<li>
+<p>B&#x53EF;&#x7531;A&#x7EBF;&#x6027;&#x8868;&#x793A;&lt;==&gt; AX=B&#x6709;&#x89E3;</p>
+</li>
+<li>
+<p>AX=B&#x6709;&#x89E3;&lt;==&gt;R(A)=R(A,B)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7EC4;&#x5408;&#x7CFB;&#x6570;</p>
+<ul>
+<li>&#x8BBE;A:x1,x2...xn &#x6709;&#x4E00;&#x7EC4;&#x6570;k1,k2...kn &#x5219;k1x1+k1x2+....krxr&#x5C31;&#x79F0;&#x4E3A;A&#x7684;&#x4E00;&#x4E2A;&#x7EC4;&#x5408;&#x7CFB;&#x6570;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7EBF;&#x6027;&#x76F8;&#x5173;</p>
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;&#xFF1A; &#x8BBE;&#x5411;&#x91CF;&#x7EC4;A:x1,x2,x3... &#x82E5;&#x5B58;&#x5728;&#x4E0D;&#x5168;&#x4E3A;0&#x7684;&#x6570;k1,k2...kr&#x4F7F;&#x5F97;k1x1+k1x2+....krxr=0&#x5219;A&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x5426;&#x5219;&#x7EBF;&#x6027;&#x65E0;&#x5173;</p>
+<ul>
+<li>
+<p>&#x7279;&#x4F8B;</p>
+<ul>
+<li>
+<ol>
+<li>&#x4E8C;&#x4E2A;&#x5411;&#x91CF;&#x7EC4;&#x6210;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#x82E5;A&#x662F;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x5219;&#x5206;&#x91CF;&#x5BF9;&#x5E94;&#x6210;&#x6BD4;&#x4F8B;1</li>
+</ol>
+</li>
+<li>2 &#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x5F62;&#x6210;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#x82E5;x=0&#x5219;&#x5176;&#x662F;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x5426;&#x5219;&#x5176;&#x662F;&#x7EBF;&#x6027;&#x65E0;&#x5173;</li>
+<li>3 &#x5411;&#x91CF;&#x7EC4;&#x4E2D;&#x82E5;&#x6709;&#x4E00;&#x4E2A;&#x662F;0&#xFF0C;&#x5219;A&#x5FC5;&#x662F;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x7684;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x4F17;&#x591A;&#x5224;&#x5B9A;&#x5B9A;&#x7406;</p>
+<ul>
+<li>
+<ol>
+<li>&#x5411;&#x91CF;A &#xFF1A;x1&#xFF0C;x2....xn &#x7EBF;&#x6027;&#x76F8;&#x5173;&lt;==&gt;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;ai&#x53EF;&#x7531;&#x5176;&#x4F59;&#x5411;&#x91CF;&#x7EBF;&#x6027;&#x76F8;&#x5173;</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>&#x82E5;&#x5411;&#x91CF;A&#xFF1A;x1&#xFF0C;x2....xn&#x7EBF;&#x6027;&#x76F8;&#x5173;&lt;<mark>&gt; AX=0&#x6709;&#x975E;&#x96F6;&#x89E3;&lt;</mark>&gt;R(A)&lt;r</li>
+</ol>
+<ul>
+<li>&#x63A8;&#x8BBA; &#x82E5;&#x5411;&#x91CF;A&#xFF1A;x1&#xFF0C;x2....xn&#x7EBF;&#x6027;&#x65E0;&#x5173;&lt;<mark>&gt;AX=0&#x53EA;&#x6709;&#x96F6;&#x89E3;&lt;</mark>&gt;R(A)=r</li>
+</ul>
+</li>
+<li>
+<p>&#x91CD;&#x8981;&#x63A8;&#x8BBA;&#xFF1A;</p>
+<ul>
+<li>
+<ol>
+<li>&#x77ED;&#x65E0;&#x5173;&#xFF0C;&#x5219;&#x957F;&#x65E0;&#x5173;</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>&#x957F;&#x65E0;&#x5173;&#xFF0C;&#x5219;&#x77ED;&#x65E0;&#x5173;</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>m&#x4E2A;n&#x7EF4;&#x5411;&#x91CF;&#x6784;&#x6210;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#xFF0C;&#x5F53;m&gt;n&#x65F6;&#xFF0C;&#x5411;&#x91CF;&#x7EC4;&#x7EBF;&#x6027;&#x76F8;&#x5173;</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x5411;&#x91CF;&#x7EC4;&#x7684;&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;&#x548C;&#x79E9;</p>
+<ul>
+<li>
+<p>&#x5957;&#x8DEF;<br>
+<img src="assets/1.png" alt></p>
+</li>
+<li>
+<p>&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;</p>
+<ul>
+<li>
+<p>&#x8BBE;  &#x82E5;&#x5411;&#x91CF;A&#xFF1A;x1&#xFF0C;x2....xn&#x7684;&#x90E8;&#x5206;&#x7EC4;&#xFF0C;&#x5411;&#x91CF;Ao&#xFF1A;xi1&#xFF0C;xi2....xir&#x6EE1;&#x8DB3; 1. &#x7EBF;&#x6027;&#x65E0;&#x5173; 2. &#x53EF;&#x4EE5;&#x8868;&#x793A;A&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x5219;&#x79F0;Ao&#x662F;A&#x7684;&#x4E00;&#x4E2A;&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;</p>
+</li>
+<li>
+<p>&#x7279;&#x70B9;</p>
+<ul>
+<li>&#x4E0D;&#x552F;&#x4E00;</li>
+<li>&#x5411;&#x91CF;&#x7EC4;&#x53EA;&#x6709;0&#x5411;&#x91CF;&#x5219;&#x6CA1;&#x6709;</li>
+<li>&#x7EBF;&#x6027;&#x65E0;&#x5173;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#x7684;&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;&#x662F;&#x5176;&#x672C;&#x8EAB;</li>
+<li>&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;&#x4E0E;A&#x7B49;&#x4EF7;</li>
+<li>&#x4EFB;&#x610F;&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;&#x4E4B;&#x95F4;&#x7B49;&#x4EF7;&#xFF0C;&#x4E14;&#x6240;&#x542B;&#x5411;&#x91CF;&#x4E2A;&#x6570;&#x76F8;&#x540C;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x79E9;</p>
+<ul>
+<li>&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;&#x6240;&#x542B;&#x5411;&#x91CF;&#x7684;&#x4E2A;&#x6570;&#x4E3A;&#x5411;&#x91CF;&#x7EC4;&#x7684;&#x79E9;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x89E3;&#x7684;&#x7ED3;&#x6784;&#x95EE;&#x9898;</p>
+<ul>
+<li>
+<p>&#x57FA;&#x7840;&#x89E3;&#x7CFB;</p>
+<ul>
+<li>
+<p>&#x662F;&#x89E3;&#x5411;&#x91CF;&#x7684;&#x6781;&#x5927;&#x65E0;&#x5173;&#x7EC4;</p>
+</li>
+<li>
+<p>&#x7279;&#x70B9;</p>
+<ul>
+<li>&#x7EBF;&#x6027;&#x65E0;&#x5173;</li>
+<li>&#x65B9;&#x7A0B;&#x7EC4;&#x7684;&#x89E3;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x9F50;&#x6B21;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;</p>
+<ul>
+<li>
+<p>&#x8BBE;&#xFF1A;&#x9F50;&#x65B9;AX=0 &#x89E3;&#x96C6;&#x4E3A;S={&#x3BE;|A&#x3BE;=0}</p>
+<ul>
+<li>&#x5219; &#x4EFB;&#x610F;&#x3BE;1 &#x3BE;2  &#x2208;S ==&#x300B; &#x3BE;1+&#x3BE;2&#x2208;S</li>
+<li>&#x4EFB;&#x610F;&#x3BE;&#x2208; S &#x4EFB;&#x610F;k&#x2208;R ==&#x300B; k&#x3BE; &#x5C5E;&#x4E8E;R</li>
+</ul>
+</li>
+<li>
+<p>&#x5B9A;&#x7406;</p>
+<ul>
+<li>&#x8BBE; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">1,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span></span></span></span>2...<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&#x2212;</mo><mi>r</mi><mtext>&#x4E3A;</mtext><mi>A</mi><mi>X</mi><mo>=</mo><mn>0</mn><mtext>&#x7684;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x89E3;&#x7CFB;&#xFF0C;&#x5219;&#x5176;&#x89E3;&#x7684;&#x7ED3;&#x6784;&#x5F0F;&#x4E3A;</mtext><mi>X</mi><mo>=</mo><mi>C</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">n-r &#x4E3A; AX=0&#x7684;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x89E3;&#x7CFB;&#xFF0C;&#x5219;&#x5176;&#x89E3;&#x7684;&#x7ED3;&#x6784;&#x5F0F;&#x4E3A;X=C1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord cjk_fallback">&#x4E3A;</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord cjk_fallback">&#x7684;</span><span class="mord cjk_fallback">&#x4E00;</span><span class="mord cjk_fallback">&#x4E2A;</span><span class="mord cjk_fallback">&#x57FA;</span><span class="mord cjk_fallback">&#x7840;</span><span class="mord cjk_fallback">&#x89E3;</span><span class="mord cjk_fallback">&#x7CFB;</span><span class="mord cjk_fallback">&#xFF0C;</span><span class="mord cjk_fallback">&#x5219;</span><span class="mord cjk_fallback">&#x5176;</span><span class="mord cjk_fallback">&#x89E3;</span><span class="mord cjk_fallback">&#x7684;</span><span class="mord cjk_fallback">&#x7ED3;</span><span class="mord cjk_fallback">&#x6784;</span><span class="mord cjk_fallback">&#x5F0F;</span><span class="mord cjk_fallback">&#x4E3A;</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">1</span></span></span></span>1 + C2<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi>C</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">2 +...... Cn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">n</span></span></span></span>n</li>
+</ul>
+</li>
+<li>
+<p>&#x6C42;&#x6CD5;<br>
+<img src="assets/2.jpg" alt></p>
+<ul>
+<li>&#x2460;&#x6C42;&#x6700;&#x7B80;--&gt; &#x2461;&#x5199;&#x51FA;&#x540C;&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;--&gt; &#x2462;&#x786E;&#x8BA4;&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;--&gt; &#x2463;&#x81EA;&#x7531;&#x672A;&#x77E5;&#x91CF;&#x53D6;&#x7279;&#x6B8A;&#x503C;&#x627E;&#x51FA;&#x7279;&#x6B8A;&#x7684;&#x89E3;&#x5411;&#x91CF;</li>
+</ul>
+</li>
+<li>
+<p>&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;</p>
+<ul>
+<li>&#x82E5;ATA = 0&#x548C;AX=0&#x6709;&#x76F8;&#x540C;&#x7684;&#x89E3;&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x7684;&#x57FA;&#x7840;&#x89E3;&#x6790;&#x6240;&#x542B;&#x7684;&#x89E3;&#x5411;&#x91CF;&#x4E2A;&#x6570;&#x76F8;&#x7B49; ----&gt; &#x4F8B;&#x9898;&#xFF01;&#x5E38;&#x8003;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x975E;&#x9F50;&#x6B21;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;</p>
+<ul>
+<li>
+<p>&#x8BBE;&#x975E;&#x65B9;AX=b&#x7684;&#x89E3;&#x96C6;&#x4E3A;T{&#x3B7;|A&#x3B7; =b&#xFF09;}&#x5219;</p>
+<ul>
+<li>&#x2460; &#x4EFB;&#x610F;&#x3B7;1&#xFF0C;&#x3B7;2 &#x2208;T ==&#x300B; &#x3B7;1-&#x3B7;2 &#xFF0C;&#x6EE1;&#x8DB3;AX=0</li>
+<li>&#x2461; &#x4EFB;&#x610F;&#xFFE5; &#x2208;N&#xFF08;A)&#xFF0C;A&#x3B7;*+$) =b</li>
+</ul>
+</li>
+<li>
+<p>&#x5BFC;&#x51FA;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;</p>
+<ul>
+<li>AX=0 &#x79F0;&#x4E3A;AX=b&#x7684;&#x5BFC;&#x51FA;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;</li>
+</ul>
+</li>
+<li>
+<p>&#x5B9A;&#x7406;</p>
+<ul>
+<li>&#x8BBE; AX=b &#x65E0;&#x7A77;&#x591A;&#x89E3; AX=0 &#x7684;&#x57FA;&#x7840;&#x89E3;&#x6790; &#x4E3A;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">!</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">!,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mclose">!</span><span class="mpunct">,</span></span></span></span>2,<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3....</mn><mi>X</mi><mo>=</mo><mi>&#x3B7;</mi><mo>&#x2217;</mo><mo>+</mo></mrow><annotation encoding="application/x-tex">3....   X=&#x3B7;*+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.6597200000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3B7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2217;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span> = &#x3B7;* +c1<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>c</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1 +c2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord">2</span></span></span></span>2+....</li>
+</ul>
+</li>
+<li>
+<p>&#x6C42;&#x6CD5;</p>
+<ul>
+<li>&#x6CD5; 1 &#x2460; &#x6C42;&#x51FA;&#x7279;&#x89E3; &#x2461; &#x6C42;&#x5BFC;&#x51FA;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x57FA;&#x7840;&#x89E3;&#x7CFB; &#x2462; &#x7279;&#x89E3;+&#x5BFC;&#x51FA;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x7684;&#x901A;&#x89E3;</li>
+<li>&#x6CD5;2 &#x6C42;&#x89E3;&#x901A;&#x89E3; --&#x300B; &#x5206;&#x89E3;&#x51FA;&#x5411;&#x91CF;&#x548C;&#x7684;&#x5F62;&#x5F0F;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x91CD;&#x8981;&#x5B9A;&#x7406;</p>
+<ul>
+<li>
+<p>&#x82E5;A&#xFF0C;B&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x7EBF;&#x6027;&#x8868;&#x793A;&#x5219;&#x79F0;A&#xFF0C;B&#x7B49;&#x4EF7;</p>
+<ul>
+<li>&#x7B49;&#x4EF7;&#x7684;&#x5411;&#x91CF;&#x79E9;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x79E9;&#x76F8;&#x540C;&#x7684;&#x5411;&#x91CF;&#x7EC4;&#x4E0D;&#x4E00;&#x5B9A;&#x7B49;&#x4EF7;</li>
+</ul>
+</li>
+<li>
+<p>B&#x53EF;&#x7531;A&#x7EBF;&#x6027;&#x8868;&#x793A;&lt;==&gt; AX=B&#x6709;&#x89E3;</p>
+</li>
+<li>
+<p>AX=B&#x6709;&#x89E3;&lt;==&gt;R(A)=R(A,B)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95">&#x9AD8;&#x65AF;&#x6D88;&#x5143;&#x6CD5;</h3>
+
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x57FA;&#x4E8E;&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x7684;3&#x79CD;&#x521D;&#x7B49;&#x53D8;&#x6362;</p>
+</li>
+<li>
+<p>3&#x79CD;&#x521D;&#x7B49;&#x53D8;&#x6362;</p>
+<ul>
+<li>&#x4E92;&#x6362;&#x53D8;&#x6362;&#xFF08;&#x6CE8;&#x610F;&#xFF1A;&#x7B26;&#x53F7;&#x4E0D;&#x8981;&#x53D8;&#xFF09;</li>
+<li>&#x500D;&#x6CD5;&#x53D8;&#x6362;</li>
+<li>&#x6D88;&#x6CD5;&#x53D8;&#x6362;</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E7%89%B9%E5%BE%81%E5%80%BC%E5%92%8C%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F">&#x7279;&#x5F81;&#x503C;&#x548C;&#x7279;&#x5F81;&#x5411;&#x91CF;</h3>
+
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;</p>
+<ul>
+<li>AX=&#x3BB;X&#xFF0C;X&#x4E3A;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x3BB;&#x662F;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>&#x6C42;&#x6CD5;</p>
+<ul>
+<li>&#x8BA1;&#x7B97;|&#x3BB;E-A|=0&#x65F6;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x51FA;&#x73B0;0&#x5143;&#x7D20;</li>
+<li>&#x6700;&#x597D;&#x4E0D;&#x8981;&#x51FA;&#x73B0;&#x5206;&#x5F0F;&#x500D;&#x6570;</li>
+</ul>
+</li>
+<li>
+<p>&#x6027;&#x8D28;</p>
+<ul>
+<li>
+<p>&#x7279;&#x5F81;&#x503C;</p>
+<ul>
+<li>
+<p>A^n * X=&#x3BB;^n * X</p>
+<ul>
+<li>&#x3BB;<sup>n&#x662F;A</sup>n&#x7684;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>(kA)X=(k&#x3BB;)X</p>
+<ul>
+<li>k&#x3BB;&#x662F;kA&#x7684;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>A^-1X=1/&#x3BB; X</p>
+<ul>
+<li>1/&#x3BB;&#x662F;A^-1&#x7684;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>A^* X = |A|/&#x3BB; X</p>
+<ul>
+<li>|A|/&#x3BB;&#x662F;A^*&#x7684;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>A^T X=&#x3BB;X</p>
+<ul>
+<li>&#x3BB;&#x662F;A^T&#x7684;&#x7279;&#x5F81;&#x503C;</li>
+</ul>
+</li>
+<li>
+<p>f(&#x3BB;)&#x662F;f(A)&#x7684;&#x7279;&#x5F81;&#x503C;</p>
+</li>
+<li>
+<p>&#x3BB;1*&#x3BB;2&#xB7;&#xB7;&#xB7;&#x3BB;n=|A|</p>
+</li>
+<li>
+<p>tr(A)=&#x3BB;1+&#x3BB;2+&#xB7;&#xB7;&#xB7;+&#x3BB;n</p>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x7279;&#x5F81;&#x5411;&#x91CF;</p>
+<ul>
+<li>&#x5C5E;&#x4E8E;&#x4E0D;&#x540C;&#x7279;&#x5F81;&#x503C;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x662F;&#x7EBF;&#x6027;&#x65E0;&#x5173;&#x7684;</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%8C%96">&#x77E9;&#x9635;&#x5BF9;&#x89D2;&#x5316;</h3>
+
+<ul>
+<li>
+<p>&#x76F8;&#x4F3C;&#x5BF9;&#x89D2;&#x5316;</p>
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;</p>
+<ul>
+<li>P^-1AP=diag(&#xFF09;0/*</li>
+</ul>
+</li>
+<li>
+<p>&#x5B50;&#x4E3B;&#x9898; 2</p>
+</li>
+<li>
+<p>&#x5B50;&#x4E3B;&#x9898; 3</p>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#x5BF9;&#x89D2;&#x5316;</p>
+<ul>
+<li>
+<p>&#x5B9A;&#x4E49;</p>
+<ul>
+<li>Q^TAQ=diag()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E6%B1%82%E8%A1%8C%E5%88%97%E5%BC%8F">&#x6C42;&#x884C;&#x5217;&#x5F0F;</h2>
+
+<h3 class="mume-header" id="%E6%8C%89%E8%A1%8C%E5%88%97%E5%B1%95%E5%BC%80">&#x6309;&#x884C;&#x5217;&#x5C55;&#x5F00;</h3>
+
+<h3 class="mume-header" id="%E5%8C%96%E4%B8%BA%E4%B8%8A%E4%B8%89%E8%A7%92%E5%BD%A2">&#x5316;&#x4E3A;&#x4E0A;&#x4E09;&#x89D2;&#x5F62;</h3>
+
+<h3 class="mume-header" id="%E7%AE%AD%E5%A4%B4%E8%A1%8C%E5%88%97%E5%BC%8F">&#x7BAD;&#x5934;&#x884C;&#x5217;&#x5F0F;</h3>
+
+<h2 class="mume-header" id="%E6%8A%80%E5%B7%A7">&#x6280;&#x5DE7;</h2>
+
+<h3 class="mume-header" id="%E5%AF%B9%E8%A7%92%E7%9F%A9%E9%98%B5">&#x5BF9;&#x89D2;&#x77E9;&#x9635;</h3>
+
+<ul>
+<li>
+<p>&#x6027;&#x8D28;</p>
+<ul>
+<li>1&#x3001;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x4E3A;n&#x9636;&#x65B9;&#x9635;</li>
+<li>2&#x3001;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;&#x79E9;&#x7B49;&#x4E8E;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x975E;&#x96F6;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</li>
+<li>3&#x3001;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;&#x8FF9;&#x7B49;&#x4E8E;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x975E;&#x96F6;&#x5143;&#x7D20;&#x7684;&#x548C;</li>
+<li>4&#x3001;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;Jordan&#x6807;&#x51C6;&#x578B;&#x5373;&#x4E3A;&#x5176;&#x672C;&#x8EAB;</li>
+<li>5&#x3001;&#x82E5;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x5747;&#x975E;&#x96F6;,&#x5219;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x975E;&#x5947;,&#x5B58;&#x5728;&#x9006;&#x77E9;&#x9635;,&#x4E14;&#x9006;&#x77E9;&#x9635;&#x4E5F;&#x4E3A;&#x5BF9;&#x89D2;&#x77E9;&#x9635;,&#x5176;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;&#x539F;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x7684;&#x5012;&#x6570;</li>
+<li>6.&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x5C31;&#x662F;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x5143;&#x7D20;&#x7684;&#x4E58;&#x79EF;</li>
+<li>7.&#x5BF9;&#x89D2;&#x77E9;&#x9635;A^n=&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x5404;&#x5143;&#x7D20;&#x5206;&#x522B;&#x6C42;&#x4ED6;&#x4EEC;&#x7684;n&#x6B21;&#x5E42;</li>
+<li>8.&#x4E24;&#x4E2A;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;&#x4E58;&#x79EF;&#x4E3A;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x5404;&#x5BF9;&#x5E94;&#x5143;&#x7D20;&#x7684;&#x4E58;&#x79EF;</li>
+<li>9.&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x7684;&#x4F34;&#x968F;&#x4ECD;&#x7136;&#x662F;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x4E14;=&#x8BE5;&#x77E9;&#x9635;&#x7684;&#x9006;*&#x8BE5;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="%E4%B8%80%E8%88%AC%E5%8F%AA%E8%80%83%E8%99%91%E5%88%97%E5%90%91%E9%87%8F">&#x4E00;&#x822C;&#x53EA;&#x8003;&#x8651;&#x5217;&#x5411;&#x91CF;</h2>
+
+<h2 class="mume-header" id="k%E9%98%B6%E5%AD%90%E5%BC%8F%E5%8F%96k%E8%A1%8Ck%E5%88%97%E4%BA%A4%E5%8F%89%E5%A4%84%E7%9A%84%E5%85%83%E7%B4%A0%E6%8C%89%E5%8E%9F%E6%9D%A5%E9%A1%BA%E5%BA%8F%E6%8E%92%E5%88%97%E6%88%90%E7%9A%84%E8%A1%8C%E5%88%97%E5%BC%8F">k&#x9636;&#x5B50;&#x5F0F;&#xFF1A;&#x53D6;k&#x884C;k&#x5217;&#x4EA4;&#x53C9;&#x5904;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6309;&#x539F;&#x6765;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x6210;&#x7684;&#x884C;&#x5217;&#x5F0F;</h2>
+
+<h2 class="mume-header" id="%E5%B8%B8%E8%80%83%E9%A2%98%E5%9E%8B">&#x5E38;&#x8003;&#x9898;&#x578B;</h2>
+
+<h3 class="mume-header" id="%E5%90%AB%E5%8F%82%E7%9F%A9%E9%98%B5%E6%B1%82%E6%9C%89%E5%94%AF%E4%B8%80%E8%A7%A3%E6%97%A0%E8%A7%A3%E6%97%A0%E7%A9%B7%E5%A4%9A%E8%A7%A3">&#x542B;&#x53C2;&#x77E9;&#x9635;&#x6C42;&#x6709;&#x552F;&#x4E00;&#x89E3;&#xFF0C;&#x65E0;&#x89E3;&#xFF0C;&#x65E0;&#x7A77;&#x591A;&#x89E3;&#x3002;</h3>
+
+<ul>
+<li>&#x5199;&#x51FA;&#x589E;&#x5E7F;&#x77E9;&#x9635;</li>
+<li>&#x5316;&#x6210;&#x884C;&#x9636;&#x68AF;&#x5F62;&#x77E9;&#x9635;</li>
+<li>&#x8BA8;&#x8BBA;&#x975E;&#x96F6;&#x884C;&#x4E2A;&#x6570;&#x4EE5;&#x53CA;&#x89C2;&#x5BDF;&#x975E;&#x96F6;&#x884C;</li>
+<li>&#x8BA8;&#x8BBA;&#x53C2;&#x6570;&#x7684;&#x53D6;&#x503C;</li>
+</ul>
+<h2 class="mume-header" id="%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E8%A7%A3%E5%88%A4%E5%AE%9A">&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x89E3;&#x5224;&#x5B9A;</h2>
+
+<p><em>XMind: ZEN - Trial Version</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
