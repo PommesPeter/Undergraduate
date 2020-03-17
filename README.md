@@ -7,7 +7,7 @@
 - Python
 ...
 这部分可以转到
-[https://github.com/PommesPeter/Summary](https://github.com/PommesPeter/Summary)
+[我的总结](https://github.com/PommesPeter/Summary)
 
 
 目录
