@@ -1,8 +1,17 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "C"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "E:/Programing Project/Git/Undergraduate/C_C++/Experiment/Experiment1/1900301236_1.c" "E:/Programing Project/Git/Undergraduate/C_C++/Experiment/Experiment1/cmake-build-debug/CMakeFiles/Experiment1.dir/1900301236_1.c.obj"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  )
 set(CMAKE_DEPENDS_CHECK_CXX
   "E:/Programing Project/Git/Undergraduate/C_C++/Experiment/Experiment1/main.cpp" "E:/Programing Project/Git/Undergraduate/C_C++/Experiment/Experiment1/cmake-build-debug/CMakeFiles/Experiment1.dir/main.cpp.obj"
   )

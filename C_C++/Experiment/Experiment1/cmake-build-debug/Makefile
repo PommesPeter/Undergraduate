@@ -122,6 +122,33 @@ Experiment1/fast:
 	$(MAKE) -f CMakeFiles\Experiment1.dir\build.make CMakeFiles/Experiment1.dir/build
 .PHONY : Experiment1/fast
 
+1900301236_1.obj: 1900301236_1.c.obj
+
+.PHONY : 1900301236_1.obj
+
+# target to build an object file
+1900301236_1.c.obj:
+	$(MAKE) -f CMakeFiles\Experiment1.dir\build.make CMakeFiles/Experiment1.dir/1900301236_1.c.obj
+.PHONY : 1900301236_1.c.obj
+
+1900301236_1.i: 1900301236_1.c.i
+
+.PHONY : 1900301236_1.i
+
+# target to preprocess a source file
+1900301236_1.c.i:
+	$(MAKE) -f CMakeFiles\Experiment1.dir\build.make CMakeFiles/Experiment1.dir/1900301236_1.c.i
+.PHONY : 1900301236_1.c.i
+
+1900301236_1.s: 1900301236_1.c.s
+
+.PHONY : 1900301236_1.s
+
+# target to generate assembly for a file
+1900301236_1.c.s:
+	$(MAKE) -f CMakeFiles\Experiment1.dir\build.make CMakeFiles/Experiment1.dir/1900301236_1.c.s
+.PHONY : 1900301236_1.c.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... Experiment1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... 1900301236_1.obj
+	@echo ... 1900301236_1.i
+	@echo ... 1900301236_1.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

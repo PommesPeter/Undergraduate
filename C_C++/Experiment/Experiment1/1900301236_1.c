@@ -1,4 +1,15 @@
-//
-// Created by 43459 on 2020/3/23.
-//
+#include <stdio.h>
+/*
+ * @Author 谢浚霖
+ * @Schoolnumber 1900301236
+ * @Date 20200325
+ * */
+
+
+int main()
+{
+    int i=1;
+    printf("%d",i);
+    return 0;
+}
 
