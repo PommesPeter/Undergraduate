@@ -59,28 +59,28 @@ include CMakeFiles/Experiment1.dir/flags.make
 CMakeFiles/Experiment1.dir/main.cpp.obj: CMakeFiles/Experiment1.dir/flags.make
 CMakeFiles/Experiment1.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Experiment1.dir/main.cpp.obj"
-	E:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Experiment1.dir\main.cpp.obj -c "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp"
+	E:\MinGW\minGWget\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Experiment1.dir\main.cpp.obj -c "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp"
 
 CMakeFiles/Experiment1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Experiment1.dir/main.cpp.i"
-	E:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp" > CMakeFiles\Experiment1.dir\main.cpp.i
+	E:\MinGW\minGWget\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp" > CMakeFiles\Experiment1.dir\main.cpp.i
 
 CMakeFiles/Experiment1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Experiment1.dir/main.cpp.s"
-	E:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp" -o CMakeFiles\Experiment1.dir\main.cpp.s
+	E:\MinGW\minGWget\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\main.cpp" -o CMakeFiles\Experiment1.dir\main.cpp.s
 
 CMakeFiles/Experiment1.dir/1900301236_1.c.obj: CMakeFiles/Experiment1.dir/flags.make
 CMakeFiles/Experiment1.dir/1900301236_1.c.obj: ../1900301236_1.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Experiment1.dir/1900301236_1.c.obj"
-	E:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Experiment1.dir\1900301236_1.c.obj   -c "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c"
+	E:\MinGW\minGWget\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Experiment1.dir\1900301236_1.c.obj   -c "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c"
 
 CMakeFiles/Experiment1.dir/1900301236_1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Experiment1.dir/1900301236_1.c.i"
-	E:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c" > CMakeFiles\Experiment1.dir\1900301236_1.c.i
+	E:\MinGW\minGWget\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c" > CMakeFiles\Experiment1.dir\1900301236_1.c.i
 
 CMakeFiles/Experiment1.dir/1900301236_1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Experiment1.dir/1900301236_1.c.s"
-	E:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c" -o CMakeFiles\Experiment1.dir\1900301236_1.c.s
+	E:\MinGW\minGWget\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "E:\Programing Project\Git\Undergraduate\C_C++\Experiment\Experiment1\1900301236_1.c" -o CMakeFiles\Experiment1.dir\1900301236_1.c.s
 
 # Object files for target Experiment1
 Experiment1_OBJECTS = \

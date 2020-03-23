@@ -4,8 +4,6 @@
  * @Schoolnumber 1900301236
  * @Date 20200325
  * */
-
-
 int main()
 {
     int i=1;

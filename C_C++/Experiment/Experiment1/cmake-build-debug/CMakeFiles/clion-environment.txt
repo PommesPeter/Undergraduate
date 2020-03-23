@@ -1,4 +1,4 @@
-ToolSet: w64 6.0 (local)@E:\mingw64
+ToolSet: 5.3 (local)@E:\MinGW\minGWget
 Options: 
 
 Options:
